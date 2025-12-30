@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All Season Property Maintenance | Lawn Care & Exterior Maintenance</title>
+  <meta name="description" content="All Season Property Maintenance — lawn cutting, edging, yard cleanup, and exterior maintenance. Fast response and easy to contact." />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1722;
+      --text:#e8eef6;
+      --muted:#a8b3c4;
+      --accent:#35d07f;
+      --accent2:#21a1ff;
+      --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 500px at 20% 0%, rgba(53,208,127,.18), transparent 60%),
+                  radial-gradient(900px 500px at 80% 10%, rgba(33,161,255,.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px
+    }
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, rgba(53,208,127,1), rgba(33,161,255,1));
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .nav a{opacity:.9;text-decoration:none}
+    .navlinks{display:flex;gap:16px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:10px;
+      padding:12px 16px;border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      text-decoration:none;
+      transition: .15s transform, .15s background;
+      font-weight:650;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.07)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(53,208,127,.95), rgba(53,208,127,.65));
+      color:#07110b;
+      border: none;
+    }
+    .btn.secondary{
+      background: linear-gradient(135deg, rgba(33,161,255,.95), rgba(33,161,255,.6));
+      color:#06101a;
+      border:none;
+    }
+    header.hero{
+      padding:30px 0 10px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      header.hero{grid-template-columns:1fr}
+    }
+    .hero-card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    .kicker{
+      color:var(--muted);
+      font-weight:700;
+      letter-spacing:.3px;
+      text-transform:uppercase;
+      font-size:.85rem;
+    }
+    h1{
+      margin:10px 0 10px;
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      line-height:1.12;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:1.06rem;
+      margin:0 0 16px;
+    }
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .badge{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:650;
+      font-size:.92rem;
+    }
+    .right-card{
+      display:grid;
+      gap:12px;
+    }
+    .mini{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+    }
+    .mini strong{display:block;margin-bottom:8px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px;
+    }
+    .card h3{margin:0 0 6px}
+    .card p{margin:0;color:var(--muted)}
+    section{padding:10px 0}
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin-top:10px;
+    }
+    @media (max-width: 900px){ .gallery{grid-template-columns:1fr} }
+    .ph{
+      height:180px;border-radius:18px;
+      border:1px dashed rgba(255,255,255,.18);
+      background: rgba(255,255,255,.02);
+      display:flex;align-items:center;justify-content:center;
+      color: rgba(255,255,255,.55);
+      text-align:center;
+      padding:14px;
+    }
+    footer{
+      padding:26px 0 40px;
+      color:rgba(255,255,255,.6);
+      border-top:1px solid var(--border);
+      margin-top:18px;
+    }
+    .small{font-size:.95rem;color:var(--muted)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width: 900px){ .split{grid-template-columns:1fr} }
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.25);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .note{color:var(--muted);font-size:.95rem;margin-top:8px}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>All Season Property Maintenance</div>
+      </div>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="hero-card">
+        <div class="kicker">Property Maintenance • Lawn Care • Exterior Cleanup</div>
+        <h1>Clean cuts, clean edges,<br/>professional results</h1>
+        <p class="sub">
+          Serving Ingersoll, Woodstock, London and nearby areas. Fast response and easy to contact.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="tel:+15196175536">📞 Call Now</a>
+          <a class="btn secondary" href="https://wa.me/15196175536" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn" href="mailto:starlin1706@hotmail.com">✉️ Email Us</a>
+        </div>
+
+        <div class="badge-row">
+          <div class="badge">✅ Clear pricing</div>
+          <div class="badge">✅ On-time service</div>
+          <div class="badge">✅ Quality work</div>
+        </div>
+      </div>
+
+      <div class="right-card">
+        <div class="mini">
+          <strong>Service area</strong>
+          <div class="small">Ingersoll • Woodstock • London • Nearby towns</div>
+        </div>
+        <div class="mini">
+          <strong>Hours</strong>
+          <div class="small">Mon–Sat • 8:00 AM – 7:00 PM</div>
+        </div>
+        <div class="mini">
+          <strong>What we do</strong>
+          <div class="small">Lawn cutting • Edging • Leaf cleanup • General exterior maintenance</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="services">
+      <div class="grid">
+        <div class="card">
+          <h3>🌿 Lawn cutting</h3>
+          <p>Residential & small commercial. Even cuts, tidy finish.</p>
+        </div>
+        <div class="card">
+          <h3>📏 Edging & trimming</h3>
+          <p>Clean lines on sidewalks, driveways, and garden borders.</p>
+        </div>
+        <div class="card">
+          <h3>🍂 Yard cleanup</h3>
+          <p>Leaves, small branches, light debris removal and exterior cleanup.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos">
+      <div class="hero-card">
+        <div class="kicker">Gallery</div>
+        <h2 style="margin:6px 0 4px;">Your work photos</h2>
+        <p class="small">Replace these placeholders with your real photos.</p>
+
+        <div class="gallery">
+          <div class="ph">📷 Photo 1<br/>Replace with your image</div>
+          <div class="ph">📷 Photo 2<br/>Before / After</div>
+          <div class="ph">📷 Photo 3<br/>Fresh cuts</div>
+        </div>
+
+        <p class="note">Tip: put images in the same folder and use <b>&lt;img src="photo1.jpg"&gt;</b>.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="split">
+        <div class="hero-card">
+          <div class="kicker">Quick quote</div>
+          <h2 style="margin:6px 0 4px;">Request a quote</h2>
+          <p class="small">Send your city, approximate yard size, and what you need (cutting, edging, cleanup, etc.).</p>
+
+          <div style="display:grid;gap:10px;margin-top:12px">
+            <input placeholder="Your name" />
+            <input placeholder="Phone number" />
+            <input placeholder="City" />
+            <textarea placeholder="What service do you need?"></textarea>
+            <a class="btn primary" href="mailto:starlin1706@hotmail.com?subject=Quote%20Request%20-%20All%20Season%20Property%20Maintenance&body=Hi,%20I%20would%20like%20a%20quote.%0A%0AName:%20%0APhone:%20%0ACity:%20%0ADetails:%20">
+              ✉️ Email Quote Request
+            </a>
+            <div class="note">This opens your email app with a ready-to-send message.</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="kicker">Contact</div>
+          <h2 style="margin:6px 0 4px;">Reach us</h2>
+          <div class="small" style="display:grid;gap:10px;margin-top:10px">
+            <div><b>Phone:</b> +1 519-617-5536</div>
+            <div><b>Email:</b> starlin1706@hotmail.com</div>
+            <div><b>Area:</b> Ingersoll and surrounding cities</div>
+          </div>
+
+          <div class="cta" style="margin-top:14px">
+            <a class="btn secondary" href="https://wa.me/15196175536" target="_blank" rel="noopener">💬 WhatsApp</a>
+            <a class="btn" href="tel:+15196175536">📞 Call</a>
+          </div>
+
+          <p class="note" style="margin-top:14px">Want Google Maps, reviews, and a photo banner? Tell me and I’ll add it.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div>© <span id="y"></span> All Season Property Maintenance</div>
+        <div class="small">Mobile-friendly • Dark theme • Fast contact</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
